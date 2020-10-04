@@ -4,8 +4,9 @@ source "$(dirname $0)/bin/conf"
 [ "$USER" = "root" ]  # USER MUST BE ROOT
 
 ### CREATE DIRECTORIES ###
-mkdir -p "$logdir" "$datadir"
-chown www-data:www-data "$logdir" "$datadir"
+mkdir -p "$logdir" "$datadir" "$datadir/counters"
+echo -n >> "counter" # increment the conter
+chown www-data:www-data "$logdir" "$datadir" "$datadir/counters"
 
 ### INSTALL THIS SYSTEM ###
 rsync -av --delete "$(dirname $0)/bin/" "$appdir/"

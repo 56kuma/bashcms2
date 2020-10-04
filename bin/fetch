@@ -1,6 +1,6 @@
 #!/bin/bash -euvx
 source "$(dirname $0)/conf"
-exec 2> "$logdir/$(basename $0).$(data +%Y%m%d_%H%M%S).$$"
+exec 2> "$logdir/$(basename $0).$(date +%Y%m%d_%H%M%S).$$"
 [ -n "${CONTENT_LENGTH}" ] && dd bs=${CONTENT_LENGTH} > /dev/null
 
 echo -e 'Content-type: text/html\n\n'
@@ -45,6 +45,9 @@ while read d ; do
         tee "$datadir/$d/title"                            |
         awk -v d="$d" '{gsub(/s\//,"=",d);
 	        print "<a href=\"/?" d "\">" $0 "</a>"}' > "$datadir/$d/link"
+        
+        ymd=$(sed 's/ .*//' < "$datadir/$d/created_time")
+        sed "s;</a>; ($ymd)&;" "$datadir/$d/link" > "$datadir/$d/link_date"
 
         touch "$datadir/$d/nav"
 done

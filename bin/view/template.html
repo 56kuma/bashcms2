@@ -2,22 +2,46 @@ Content-Type: text/html
 
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>$title$</title>
-</head>
+    <link rel="stylesheet" href="/view/default.css" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="/view/main.js"></script>
+  </head>
 <body>
-    <header>
-        <p>$created_time$</p>
-        <p>$nav$</p>
+    <header id="page-header">
+      <hgroup>
+        <h1><a href="/">理想を失わない現実主義者になれ</a></h1>
+	<h2>Be a realist who never gives up on a dream.</h2>
+      </hgroup>
+      <nav><ul>
+        <li><a href="/?post">作業日誌（ブログ）</li>
+        <li>hogehogo</li>
+      </ul></nav>
     </header>
-    $body$
-    <footer>
-	<p>created: $created_time$,
-	        modified: $modified_time$,
-		keywords: $Keywords$</p>
-	<p>Copyright: $Copyright$</p>
-    </footer>
+    <article id="article">
+      <header id="article-header">
+        <nav>
+	   $nav$<br />created: $created_time$<br />views: $views$
+        </nav>
+      </header>
+      <article id="article-body">
+        $body$
+      </article>
+      <footer id="article-footer">
+         <nav>
+           created: $created_time$nbsp;(last modified: $modified_time$)<br />views:&nbsp;keywords: $Keywords$
+	 </nav>
+      </footer>
+    </article>
+    <aside id="widgets">
+	    <!-- <aside>ここにサイト内検索等の機能を入れる</aside> -->
+	<aside id="last-articles"></aside>
+        <footer id="page-footer">
+          <p>Copyright: $Copyright$</P>
+        </footer>
+    </aside>
 </body>
 </html>
 
