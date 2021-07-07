@@ -40,11 +40,7 @@ padding:3px 20px; margin:15px 0px; background-color:#EEE; }
 #widgets a{ color:black; font-size:80%; }
 #widgets aside{ width:260px; margin:0px 20px; padding-bottom:20px; }
 
-text {
-    color : brown;
-  }
-
-blockquote {
+#blockquote {
     position: relative;
     padding: 7px 16px;
     box-sizing: border-box;
@@ -52,7 +48,7 @@ blockquote {
     color: #585858;
     border: solid 3px #585858;
 }
-blockquote:before{
+#blockquote:before{
     display: inline-block;
     position: absolute;
     top: -20px;
@@ -69,7 +65,7 @@ blockquote:before{
     font-size: 22px;
 }
 
-blockquote:after{
+#blockquote:after{
     display: inline-block;
     position: absolute;
     bottom: -20px;
@@ -87,13 +83,13 @@ blockquote:after{
     font-weight: 900;
 }
 
-blockquote p {
+#blockquote p {
     padding: 0;
     margin: 10px 0;
     line-height: 1.7;
 }
 
-blockquote cite {
+#blockquote cite {
     display: block;
     text-align: right;
     color: #888888;
