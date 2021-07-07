@@ -2,7 +2,7 @@
 body { max-width:1000px; }
 article, nav, header, footer, aside, li { display:block; float:left; }
 footer { width:100%; clear:both; font-size:70% }
-ul { margin-left:30px; }
+ul { margin-left:300px; }
 a { color:red; text-decoration:none;}
 
 #page-header { text-align:center; width:100%; padding:20px 0px; }
