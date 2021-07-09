@@ -58,4 +58,6 @@ function rankArticles(num){
 	var url = "/rank_articles.cgi?num=" + num;
 	httpReq.open("GET",url,true);
 	httpReq.send(null);
+=======
+>>>>>>> f44e779f080b6485736b2e22235d12c45ff313f7
 }
