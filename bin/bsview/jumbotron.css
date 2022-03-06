@@ -80,6 +80,11 @@ h1 {
 }
 
 /* highright.js */
+/* コード表示部分全体 */
+.hljs {
+  padding: 2em 0.5em 1em;
+  border-radius: 2px; /* 角に少し丸みをつける */
+}
 /* 行番号 */
 td.hljs-ln-numbers {
   -webkit-touch-callout: none;
