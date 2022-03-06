@@ -9,56 +9,124 @@ body {
 
 blockquote {
   position: relative;
-  padding: 7px 16px;
+  padding: 10px 20px;
   box-sizing: border-box;
   font-style: italic;
-  color: #585858;
-  border: solid 3px #585858;
+  color: #4e4e4e;
+  background: #f2f9ff;
 }
+
 blockquote:before{
   display: inline-block;
   position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-  text-align: center;
+  top: 7px;
+  left: 10px;
   content: "\f10d";
   font-family: FontAwesome;
-  background: #585858;
-  color: #FFF;
-  font-size: 22px;
+  color: #d2e6ff;
+  font-size: 58px;
+  line-height: 1;
+  font-weight: 900;
+  z-index:0;
 }
 
 blockquote:after{
   display: inline-block;
   position: absolute;
-  bottom: -20px;
-  right: -20px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
+  bottom: 5px;
+  right: 15px;
   text-align: center;
   content: "\f10e";
   font-family: FontAwesome;
-  background: #585858;
-  color: #FFF;
-  font-size: 22px;
+  color: #d2e6ff;
+  font-size: 40px;
+  line-height: 1;
   font-weight: 900;
 }
 
 blockquote p {
+  position: relative;
   padding: 0;
   margin: 10px 0;
+  z-index: 3;
   line-height: 1.7;
 }
 
 blockquote cite {
+  position: relative;
+  z-index: 3;
   display: block;
   text-align: right;
   color: #888888;
   font-size: 0.9em;
+}
+
+
+h3 {
+  font-size:x-large;
+  color: rgb(0, 0, 0);
+  border-bottom: solid 1px rgb(55, 79, 110);
+  padding-top: 1em; /* 行間の調整 */
+  padding-bottom: 0.4em; /* 行間の調整 */
+
+}
+
+h1 {
+  font-size:xx-large;
+  /*線の種類（二重線）太さ 色*/
+  border-bottom: double 3px #2c2c2c;
+  padding-top: 0em; /* 行間の調整 */
+  padding-bottom: 0.4em; /* 行間の調整 */
+}
+
+/* ### */
+/* Doxy pretty-printing styles. Used with prettify.js.  */
+/* ### */
+
+pre .str, code .str { color: #fec243; } /* string  - eggyolk gold */
+pre .kwd, code .kwd { color: #8470FF; } /* keyword - light slate blue */
+pre .com, code .com { color: #32cd32; font-style: italic; } /* comment - green */
+pre .typ, code .typ { color: #6ecbcc; } /* type - turq green */
+pre .lit, code .lit { color: #d06; } /* literal - cherry red */
+pre .pun, code .pun { color: #8B8970;  } /* punctuation - lemon chiffon4  */
+pre .pln, code .pln { color: #f0f0f0; } /* plaintext - white */
+pre .tag, code .tag { color: #9c9cff; } /* html/xml tag  (bluey)  */
+pre .htm, code .htm { color: #dda0dd; } /* html tag  light purply*/
+pre .xsl, code .xsl { color: #d0a0d0; } /* xslt tag  light purply*/
+pre .atn, code .atn { color: #46eeee; font-weight: normal;} /* html/xml attribute name  - lt turquoise */
+pre .atv, code .atv { color: #EEB4B4; } /* html/xml attribute value - rosy brown2 */
+pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
+
+pre.prettyprint, code.prettyprint {
+font-family:'Droid Sans Mono','CPMono_v07 Bold','Droid Sans';
+font-weight: bold;
+font-size: 9pt;
+background-color: #0f0f0f;
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+-o-border-radius: 8px;
+-ms-border-radius: 8px;
+-khtml-border-radius: 8px;
+border-radius: 8px;
+}
+
+pre.prettyprint {
+width: 95%;
+margin: 1em auto;
+padding: 1em;
+white-space: pre-wrap;
+}
+
+/* Specify class=linenums on a pre to get line numbering; line numbers themselves are the same color as punctuation */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #8B8970; } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+
+.prettyprint ol.linenums > li {
+list-style-type: decimal; /* 1行ごとに行番号を表示 */ 
+border-left:solid 1px #EBB15E; /* 区切り線を表示  */
+padding-left:0.5rem; /* 間隔の調整（必要であれば） */
+background-color: #000;
 }
