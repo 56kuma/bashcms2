@@ -95,10 +95,8 @@ td.hljs-ln-numbers {
   user-select: none;
 
   text-align: right;
-  color: #ccc;
-  border-right: 1px solid #CCC;
+  color: rgb(99, 99, 99);
   vertical-align: top;
-  padding-right: 10em;
 }
 
 /* for block of code */
