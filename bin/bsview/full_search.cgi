@@ -8,7 +8,7 @@ numchar=$(nkf -w16B0 <<< "$word" | xxd -plain | tr -d '\n' | sed 's/..../\&#x&;/
 cat << FIN
 Content-Type: text/html
 
-<h1>検索結果: $numchar<h1>
+<h1>検索結果: $numchar</h1>
 FIN
 
 [ -n "$word" ] &&
